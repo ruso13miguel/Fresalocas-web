@@ -1,0 +1,40 @@
+# Publica site/ en GitHub Pages cada vez que se guarda un cambio en la rama main.
+# También se puede lanzar a mano: pestaña Actions -> "Publicar en GitHub Pages" -> Run workflow.
+name: Publicar en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Revisar archivos
+        run: node scripts/check.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4

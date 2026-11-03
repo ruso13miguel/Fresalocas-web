@@ -1,0 +1,17 @@
+/**
+ * DIBUJOS DE LOS PRODUCTOS
+ * Ilustraciones en SVG que se usan en las cartas del menú.
+ * Usan las piezas "#fresa" y "#cuadros" que están al inicio de index.html.
+ * Cuando haya fotos reales, se pueden reemplazar desde productos.js (campo "foto").
+ */
+window.FL_DIBUJOS = (function () {
+  const ART = {
+  caja:(n)=>`<svg viewBox="0 0 240 220"><ellipse cx="120" cy="196" rx="96" ry="14" fill="#000" opacity=".15"/><path d="M30 110h180l-14 82H44z" fill="#fff" opacity=".95"/><path d="M30 110h180l-4 18H34z" fill="#f2d7dc"/>${Array.from({length:n},(_,i)=>{const x=40+((i*53)%150),y=58+((i*29)%40);return `<use href="#fresa" x="${x}" y="${y}" width="${56+(i%3)*8}" height="${62+(i%3)*9}"/>`}).join('')}</svg>`,
+  vaso:(top)=>`<svg viewBox="0 0 240 220"><ellipse cx="120" cy="200" rx="60" ry="10" fill="#000" opacity=".15"/><path d="M68 80h104l-14 116H82z" fill="#fff" opacity=".9"/><path d="M72 112h96l-4 30H76z" fill="${top}"/><path d="M66 74c10-26 98-26 108 0z" fill="${top}"/><use href="#fresa" x="70" y="22" width="56" height="62"/><use href="#fresa" x="112" y="14" width="64" height="70"/><path d="M84 150h72l-3 20H87z" fill="#e8183f" opacity=".8"/></svg>`,
+  choco:()=>`<svg viewBox="0 0 240 220"><ellipse cx="120" cy="200" rx="100" ry="12" fill="#000" opacity=".15"/><rect x="18" y="120" width="204" height="74" rx="12" fill="#2B0F16"/>${[0,1,2,3].map(i=>`<g transform="translate(${30+i*48} 70)"><use href="#fresa" width="48" height="54"/><path d="M6 30c8 30 30 36 36 0z" fill="#5A2E1A"/><path d="M8 34l32-4M10 42l28-4" stroke="#FFD27A" stroke-width="2"/></g>`).join('')}<text x="120" y="168" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="20" fill="#FCE4E8">x12 con chocolate</text></svg>`,
+  ancheta:()=>`<svg viewBox="0 0 240 220"><ellipse cx="120" cy="200" rx="96" ry="12" fill="#000" opacity=".15"/><path d="M40 120h160l-16 76H56z" fill="#c98a4b"/><path d="M60 120c0-80 120-80 120 0" fill="none" stroke="#a86c35" stroke-width="9"/><use href="#fresa" x="54" y="70" width="58" height="64"/><use href="#fresa" x="120" y="66" width="62" height="68"/><rect x="96" y="84" width="34" height="44" rx="6" fill="#7A1C2E"/><rect x="96" y="80" width="34" height="10" rx="3" fill="#FFD27A"/><path d="M120 128l-16 24M120 128l16 24" stroke="#fff" stroke-width="6"/><circle cx="120" cy="128" r="7" fill="#fff"/></svg>`,
+  exotica:()=>`<svg viewBox="0 0 240 220"><ellipse cx="120" cy="200" rx="96" ry="12" fill="#000" opacity=".15"/><path d="M30 120h180l-14 74H44z" fill="#fff" opacity=".95"/><circle cx="74" cy="104" r="28" fill="#4a1a3a"/><path d="M58 82c10-10 22-10 32 0" stroke="#3A8D3F" stroke-width="7" fill="none"/>${Array.from({length:14},(_,i)=>`<path d="M${150+Math.cos(i/14*6.28)*30} ${104+Math.sin(i/14*6.28)*30}l${Math.cos(i/14*6.28)*10} ${Math.sin(i/14*6.28)*10}" stroke="#e85a3a" stroke-width="5" stroke-linecap="round"/>`).join('')}<circle cx="150" cy="104" r="28" fill="#d8323a"/><use href="#fresa" x="94" y="56" width="58" height="64"/></svg>`,
+  mermelada:()=>`<svg viewBox="0 0 240 220"><ellipse cx="120" cy="200" rx="70" ry="10" fill="#000" opacity=".15"/><rect x="72" y="70" width="96" height="126" rx="18" fill="#a3122e"/><rect x="66" y="52" width="108" height="26" rx="8" fill="url(#cuadros)"/><rect x="86" y="112" width="68" height="48" rx="8" fill="#FFF8F2"/><text x="120" y="142" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="17" fill="#7A1C2E">fresa</text><use href="#fresa" x="150" y="128" width="56" height="62"/></svg>`
+};
+  return ART;
+})();

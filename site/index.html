@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>El de las Fresas Locas · Fresas a domicilio en Medellín</title>
+  <meta name="description" content="Fresas grandes seleccionadas una a una, fresas con chocolate, con crema y detalles para regalar. Pide por WhatsApp con domicilio en El Poblado, Laureles y Envigado.">
+  <meta name="theme-color" content="#D7263D">
+
+  <!-- Vista previa cuando se comparte el link por WhatsApp o Instagram -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="El de las Fresas Locas">
+  <meta property="og:description" content="Fresas gigantes a tu puerta en Medellín. Pide en tres toques por WhatsApp.">
+  <meta property="og:image" content="https://ruso13miguel.github.io/fresaslocas-web/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,700&family=Figtree:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Piezas de dibujo que se reutilizan en toda la página (fresa, mascota, cuadros) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fresa" viewBox="0 0 100 110">
+      <path d="M50 104C26 92 8 66 10 44 12 28 26 22 50 26c24-4 38 2 40 18 2 22-16 48-40 60z" fill="#e8183f"/>
+      <path d="M50 104C26 92 8 66 10 44c1-8 5-13 12-16-4 20 6 52 28 76z" fill="#b80e30" opacity=".55"/>
+      <ellipse cx="66" cy="44" rx="9" ry="5" fill="#fff" opacity=".28" transform="rotate(-25 66 44)"/>
+      <g fill="#ffe08a"><ellipse cx="34" cy="46" rx="2.2" ry="3.4"/><ellipse cx="52" cy="42" rx="2.2" ry="3.4"/><ellipse cx="68" cy="52" rx="2.2" ry="3.4"/><ellipse cx="40" cy="62" rx="2.2" ry="3.4"/><ellipse cx="60" cy="64" rx="2.2" ry="3.4"/><ellipse cx="50" cy="80" rx="2.2" ry="3.4"/><ellipse cx="28" cy="58" rx="2" ry="3"/><ellipse cx="74" cy="64" rx="2" ry="3"/></g>
+      <path d="M50 30C40 18 26 20 18 27c10 2 20 6 32 8 12-2 22-6 32-8-8-7-22-9-32 3z" fill="#3A8D3F"/>
+      <path d="M49 30c0-10 2-18 8-24" stroke="#2c6e30" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </symbol>
+    <!-- mascota: fresa con gafas y pulgar arriba -->
+    <symbol id="loca" viewBox="0 0 120 130">
+      <path d="M60 124C30 110 8 80 10 52 12 32 30 25 60 30c30-5 48 2 50 22 2 28-20 58-50 72z" fill="#e8183f"/>
+      <path d="M60 124C30 110 8 80 10 52c1-9 6-15 14-19-5 24 8 62 36 91z" fill="#b80e30" opacity=".5"/>
+      <g fill="#ffe08a"><ellipse cx="30" cy="80" rx="2.4" ry="3.6"/><ellipse cx="46" cy="92" rx="2.4" ry="3.6"/><ellipse cx="74" cy="92" rx="2.4" ry="3.6"/><ellipse cx="90" cy="78" rx="2.4" ry="3.6"/><ellipse cx="60" cy="106" rx="2.4" ry="3.6"/></g>
+      <path d="M60 34C48 20 30 22 20 30c12 3 24 7 40 9 16-2 28-6 40-9-10-8-28-10-40 4z" fill="#3A8D3F"/>
+      <path d="M59 34c0-12 3-22 10-28" stroke="#2c6e30" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <g fill="#2B0F16"><rect x="24" y="50" width="30" height="20" rx="9"/><rect x="66" y="50" width="30" height="20" rx="9"/><rect x="52" y="55" width="16" height="5" rx="2"/></g>
+      <g fill="#fff" opacity=".55"><rect x="29" y="53" width="9" height="4" rx="2"/><rect x="71" y="53" width="9" height="4" rx="2"/></g>
+      <path d="M44 80c8 9 24 9 32 0" stroke="#2B0F16" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+      <g transform="translate(96 66) rotate(-8)"><rect x="0" y="10" width="20" height="16" rx="6" fill="#ffd9b8" stroke="#2B0F16" stroke-width="2.5"/><rect x="5" y="-4" width="8" height="18" rx="4" fill="#ffd9b8" stroke="#2B0F16" stroke-width="2.5"/></g>
+    </symbol>
+    <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="14" result="b"/><feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9"/></filter>
+    <pattern id="cuadros" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="24" height="24" fill="#fff"/><rect width="12" height="24" fill="#D7263D" opacity=".55"/><rect width="24" height="12" fill="#D7263D" opacity=".55"/></pattern>
+  </defs>
+</svg>
+
+<header class="top gut" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="El de las Fresas Locas, inicio">
+      <svg viewBox="0 0 120 130" aria-hidden="true"><use href="#loca"/></svg>
+      <span>Fresas Locas<small>Medellín, a tu puerta</small></span>
+    </a>
+    <nav class="links" aria-label="Secciones">
+      <a href="#menu">Menú</a><a href="#pedir">Cómo pedir</a><a href="#zonas">Zonas</a><a href="#historia">Historia</a>
+    </nav>
+    <a class="icon-btn js-ig" href="https://www.instagram.com/eldelasfresaslocas/" target="_blank" rel="noopener" aria-label="Instagram @eldelasfresaslocas">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    </a>
+    <a class="icon-btn wa js-wa" data-text="¡Hola! Quiero hacer un pedido de fresas 🍓" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>
+    </a>
+    <button class="icon-btn menu-btn" id="openNav" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sheetNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 8h16M4 16h10"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="sheet-nav gut" id="sheetNav" aria-hidden="true">
+  <button class="icon-btn close" type="button" id="closeNav" aria-label="Cerrar menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <ul>
+    <li><a href="#menu">Menú <em>y precios</em></a></li>
+    <li><a href="#pedir">Pedir <em>en 3 pasos</em></a></li>
+    <li><a href="#temporada">Temporada</a></li>
+    <li><a href="#zonas">Zonas</a></li>
+    <li><a href="#historia">Historia</a></li>
+  </ul>
+  <div class="soc">
+    <a class="js-wa" data-text="¡Hola! Quiero hacer un pedido de fresas 🍓" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="js-ig" href="https://www.instagram.com/eldelasfresaslocas/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</div>
+
+<main id="inicio">
+<!-- HERO -->
+<section class="hero gut" data-bg="#FFF8F2">
+  <div class="blobs" aria-hidden="true"></div>
+  <div class="gingham" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div>
+      <h1 class="kin" id="kin" aria-label="El de las Fresas Locas"><span class="pre">El de las</span><span class="ln">FRESAS</span><span class="ln">LOCAS</span></h1>
+      <p class="tag">Aquí se venden fresas… pero también se reparten sonrisas.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa js-wa mag" data-text="¡Hola! Quiero hacer un pedido de fresas 🍓" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span>Pedir por WhatsApp</span></a>
+        <a class="btn btn-light" href="#menu"><span>Ver el menú ↓</span></a>
+      </div>
+      <div class="facts">
+        <span>Seleccionadas una a una</span><span>Domicilio gratis desde $50.000</span><span>Poblado · Laureles · Envigado</span>
+      </div>
+    </div>
+    <div class="hero-art" id="heroArt" aria-hidden="true">
+      <div class="layer" data-d="16" style="left:4%;top:4%"><svg width="74" height="81"><use href="#fresa"/></svg></div>
+      <div class="layer" data-d="44" style="left:22%;top:14%;width:62%"><svg viewBox="0 0 120 130" width="100%" style="animation-delay:-1.5s;filter:drop-shadow(0 24px 30px rgba(80,0,20,.35))"><use href="#loca"/></svg></div>
+      <div class="layer" data-d="62" style="left:0;bottom:2%"><svg width="118" height="130" style="animation-delay:-2.5s"><use href="#fresa"/></svg></div>
+      <div class="layer" data-d="28" style="right:0;top:2%"><svg width="96" height="106" style="animation-delay:-3s"><use href="#fresa"/></svg></div>
+      <div class="stamp"><svg class="spin" viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-48 0a48 48 0 1 1 96 0a48 48 0 1 1-96 0"/></defs><text font-family="Figtree, sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.4" fill="#7A1C2E"><textPath href="#circ">FRESAS FRESCAS · A TU PUERTA · </textPath></text></svg><span><b>1,2 kg</b>La Loca<br>Mayor</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq" aria-hidden="true">
+  <div class="row"><span class="track">FRESAS GIGANTES <i>✿</i> A TU PUERTA <i>✿</i> SELECCIONADAS UNA A UNA <i>✿</i> MEDELLÍN <i>✿</i> FRESAS GIGANTES <i>✿</i> A TU PUERTA <i>✿</i> SELECCIONADAS UNA A UNA <i>✿</i> MEDELLÍN <i>✿</i>&nbsp;</span></div>
+  <div class="row"><span class="track">con chocolate <i>✦</i> CON CREMA <i>✦</i> para regalar <i>✦</i> CERO DESPERDICIO <i>✦</i> con chocolate <i>✦</i> CON CREMA <i>✦</i> para regalar <i>✦</i> CERO DESPERDICIO <i>✦</i>&nbsp;</span></div>
+</div>
+
+<!-- MENU -->
+<section class="sec gut" id="menu" data-bg="#FFF8F2">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">El menú</span>
+      <h2>Elige tu <em>locura</em></h2>
+      <p class="lead">Toca <b>Agregar</b> en lo que se te antoje. Abajo se va armando tu pedido y lo mandas por WhatsApp con un toque.</p>
+    </div>
+    <div class="stack" id="stack"></div>
+    <p class="note">Las cajas de regalo y los detalles se piden con un día de anticipación.</p>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section class="sec gut" id="pedir" data-bg="#FCE4E8">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cómo pedir</span>
+      <h2>Tres toques <em>y listo</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Arma tu pedido</h3><p>Agrega cajas, vasos o regalos desde el menú. Ves el total al instante.</p></div>
+      <div class="step"><span class="n">2</span><h3>Dinos a dónde</h3><p>Escoge tu barrio y escribe la dirección. El domicilio sale en $5.000 y es gratis desde $50.000.</p></div>
+      <div class="step"><span class="n">3</span><h3>Envía por WhatsApp</h3><p>El mensaje llega listo a Cristhian. Él te confirma la hora y cómo pagar.</p></div>
+    </div>
+    <div class="cta-row">
+      <button class="btn btn-wa" type="button" id="openCart2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span>Ver mi pedido</span></button>
+      <a class="btn btn-ghost js-ig" href="https://www.instagram.com/eldelasfresaslocas/" target="_blank" rel="noopener" style="color:var(--vino)"><span>O escríbenos por Instagram</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SEASON -->
+<section class="sec gut season" id="temporada" data-bg="#7A1C2E">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--amarillo)">Ediciones de temporada</span>
+      <h2>Cada fecha, <em>su locura</em></h2>
+      <p class="lead">Combos que salen pocas veces al año. Cuando se acaban, se acaban.</p>
+    </div>
+    <div class="months" id="months">
+      <article class="mo" data-m="9" style="--k:0"><span class="when">Septiembre</span><h3>Amor y Amistad</h3><p>Detalle Loco para dos con tarjeta escrita a mano.</p></article>
+      <article class="mo" data-m="10" style="--k:1"><span class="when">Octubre</span><h3>Halloween</h3><p>Vaso Loco con chocolate oscuro, edición del mes.</p></article>
+      <article class="mo" data-m="12" style="--k:2"><span class="when">Diciembre</span><h3>Navidad y novenas</h3><p>Detalle Loco familiar y cajas para regalo de empresa.</p></article>
+      <article class="mo" data-m="5" style="--k:3"><span class="when">Mayo</span><h3>Día de la Madre</h3><p>Ancheta con mermelada artesanal y flores.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="sec gut" id="historia" data-bg="#FFF8F2">
+  <div class="wrap story">
+    <div class="story-art" aria-hidden="true">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="500" fill="url(#cuadros)"/>
+        <ellipse cx="200" cy="400" rx="170" ry="40" fill="#7A1C2E" opacity=".25"/>
+        <path d="M60 300h280l-26 130H86z" fill="#c98a4b"/><path d="M60 300h280l-6 30H66z" fill="#a86c35"/>
+        <g><use href="#fresa" x="70" y="200" width="90" height="100"/><use href="#fresa" x="140" y="180" width="110" height="120"/><use href="#fresa" x="230" y="205" width="90" height="100"/><use href="#fresa" x="110" y="240" width="70" height="78"/><use href="#fresa" x="210" y="245" width="74" height="80"/></g>
+        <path d="M96 300c0-120 208-120 208 0" fill="none" stroke="#a86c35" stroke-width="12"/>
+        <g transform="translate(250 40) rotate(10)"><ellipse cx="70" cy="70" rx="80" ry="18" fill="#3b2a1e"/><path d="M28 70c0-50 84-50 84 0z" fill="#4a3526"/><rect x="28" y="56" width="84" height="10" fill="#D7263D"/></g>
+      </svg>
+    </div>
+    <div>
+      <span class="eyebrow">Nuestra historia</span>
+      <h2 style="margin-top:12px">De la calle <em>a tu puerta</em></h2>
+      <p class="quote" style="margin-top:18px">Cristhian escoge cada fresa como si fuera para su casa, y te la lleva él mismo.</p>
+      <div class="pillars">
+        <div class="pillar"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12l4 4 10-10"/></svg></i><div><b>Seleccionadas una a una</b><span>Grandes, brillantes y sin golpes. Más frescas que en el supermercado.</span></div></div>
+        <div class="pillar"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg></i><div><b>Cero desperdicio</b><span>La fresa que no pasa la selección se vuelve mermelada artesanal.</span></div></div>
+        <div class="pillar"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></i><div><b>Más cercano que una app</b><span>Te escribe, te confirma y te entrega en la puerta con una sonrisa.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONES -->
+<section class="sec gut" id="zonas" data-bg="#FFF8F2">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Domicilios</span><h2>¿Llegamos <em>a tu casa?</em></h2></div>
+    <div class="zones">
+      <div class="zbox">
+        <div class="chips"><span class="main">El Poblado</span><span class="main">Laureles</span><span class="main">Envigado</span><span>Sabaneta</span><span>Belén</span><span>Palermo</span></div>
+        <ul class="rules">
+          <li><span>Domicilio</span><b>$5.000</b></li>
+          <li><span>Pedidos desde $50.000</span><b>Domicilio gratis</b></li>
+          <li><span>Regalos y detalles</span><b>Pide con 1 día</b></li>
+        </ul>
+        <p class="note">¿Tu barrio no aparece? Escríbenos y miramos la ruta del día.</p>
+      </div>
+      <div class="estacion">
+        <span class="eyebrow" style="color:#d9f5d6">La Estación</span>
+        <h3>Fresas con chocolate para tu evento</h3>
+        <p>Llevamos el puesto a cumpleaños, empresas, colegios y ferias. Vasos al momento para todos tus invitados.</p>
+        <a class="btn js-wa" data-text="¡Hola! Quiero cotizar La Estación para un evento 🍓" href="#" target="_blank" rel="noopener"><span>Cotizar mi evento</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RAIN -->
+<section class="gut" data-bg="#FFF8F2">
+  <div class="wrap">
+    <div class="rain" id="rain" role="img" aria-label="Juego: toca la caja y caen fresas">
+      <canvas></canvas>
+      <div class="big"><b>¿Antojo?</b><em>Toca aquí y llueven fresas</em></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="gut" id="foot">
+  <svg class="sun" id="sun" viewBox="0 0 100 110" aria-hidden="true"><use href="#fresa"/></svg>
+  <div class="wrap foot-in">
+    <h2>Pide hoy, <em>sonríe hoy</em></h2>
+    <p>Escríbenos por WhatsApp para pedir o síguenos en Instagram para ver la fruta del día.</p>
+    <div class="foot-links">
+      <a class="btn btn-wa js-wa" data-text="¡Hola! Quiero hacer un pedido de fresas 🍓" href="#" target="_blank" rel="noopener"><span>WhatsApp</span></a>
+      <a class="btn btn-light js-ig" href="https://www.instagram.com/eldelasfresaslocas/" target="_blank" rel="noopener"><span>@eldelasfresaslocas</span></a>
+    </div>
+    <p class="foot-meta">El de las Fresas Locas · Medellín · Fundado por Cristhian Oquendo</p>
+  </div>
+</footer>
+
+<!-- CART BAR -->
+<div class="cartbar gut empty" id="cartbar">
+  <div class="in">
+    <button class="open" type="button" id="openCart" aria-controls="sheet">
+      <span class="count" id="count">0</span>
+      <span class="txt"><b id="cbTitle">Tu pedido está vacío</b><small id="cbSub">Agrega algo del menú</small></span>
+      <span class="go">Pedir</span>
+    </button>
+  </div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div class="sheet gut" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" aria-hidden="true">
+  <div class="in">
+    <div class="grab"></div>
+    <div class="sheet-head"><h3 id="sheetTitle">Tu pedido</h3><button class="icon-btn" type="button" id="closeCart" aria-label="Cerrar pedido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="items" id="items"></div>
+
+    <form id="orderForm" novalidate>
+      <div style="display:grid;gap:18px">
+        <fieldset><legend>Extras para regalo</legend>
+          <div class="opts" id="extrasOpts"></div>
+        </fieldset>
+        <fieldset><legend>¿A qué barrio?</legend>
+          <div class="opts" id="zonaOpts"></div>
+        </fieldset>
+        <div class="two">
+          <div class="field"><label for="fNombre">Tu nombre</label><input id="fNombre" autocomplete="name" placeholder="Ej. Laura"></div>
+          <div class="field"><label for="fCuando">¿Para cuándo?</label><select id="fCuando"><option>Hoy, lo antes posible</option><option>Hoy en la tarde</option><option>Mañana</option><option>Otra fecha (te escribo)</option></select></div>
+        </div>
+        <div class="field"><label for="fDir">Dirección</label><input id="fDir" autocomplete="street-address" placeholder="Calle, número, apto o local"></div>
+        <div class="field"><label for="fNota">Nota (opcional)</label><textarea id="fNota" placeholder="Ej. Es un regalo, la tarjeta dice “Feliz cumple, Ana”"></textarea></div>
+        <fieldset><legend>¿Cómo pagas?</legend>
+          <div class="opts" id="pagoOpts"></div>
+        </fieldset>
+        <div class="totals" id="totals"></div>
+        <div class="send">
+          <a class="btn btn-wa" id="sendWa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span>Enviar pedido por WhatsApp</span></a>
+          <div class="copyline"><span>¿No se abrió WhatsApp?</span><button type="button" id="copyMsg">Copiar el mensaje</button></div>
+          <textarea id="msgPreview" readonly hidden aria-label="Mensaje del pedido"></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Datos primero, comportamiento al final -->
+<script src="js/config.js"></script>
+<script src="js/dibujos.js"></script>
+<script src="js/productos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
