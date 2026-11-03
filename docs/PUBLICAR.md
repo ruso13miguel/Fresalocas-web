@@ -13,10 +13,10 @@ En 1–2 minutos está en vivo. Lo ves en la pestaña **Actions**: ✓ verde = p
 
 ### Activarlo (una sola vez)
 
-1. Sube el repositorio a GitHub (ver `SUBIR-A-GITHUB.md` en la carpeta *Proyectos Web*).
+1. El repositorio ya está en GitHub: https://github.com/ruso13miguel/Fresalocas-web
 2. En el repositorio: **Settings** → **Pages** → en *Build and deployment*, **Source: GitHub Actions**.
 3. Ve a **Actions** → **Publicar en GitHub Pages** → **Run workflow**.
-4. La página queda en `https://ruso13miguel.github.io/fresaslocas-web/`.
+4. La página queda en `https://ruso13miguel.github.io/Fresalocas-web/`.
 
 > **Repositorio público o privado:** con una cuenta gratis de GitHub, Pages solo funciona en repositorios **públicos**.
 > Este proyecto no tiene claves ni datos privados, así que puede ser público sin problema.

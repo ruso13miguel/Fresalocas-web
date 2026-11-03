@@ -3,10 +3,10 @@
 ## Cómo funciona
 
 ```
-GitHub (fresaslocas-web)            GitHub Pages
+GitHub (Fresalocas-web)             GitHub Pages
 ┌───────────────────┐   deploy   ┌────────────────────────────────┐
 │ site/             │ ─────────► │ ruso13miguel.github.io/        │
-│  index.html       │  (GitHub   │   fresaslocas-web/             │
+│  index.html       │  (GitHub   │   Fresalocas-web/              │
 │  css/ js/ img/    │   Actions) └────────────────────────────────┘
 └───────────────────┘                      │ botón "Enviar pedido"
                                            ▼

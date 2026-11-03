@@ -5,8 +5,8 @@ Es una sola página hecha con HTML, CSS y JavaScript, sin librerías. El cliente
 
 | | |
 |---|---|
-| Repositorio | `ruso13miguel/fresaslocas-web` |
-| Link (cuando se active Pages) | https://ruso13miguel.github.io/fresaslocas-web/ |
+| Repositorio | `ruso13miguel/Fresalocas-web` (carpeta local: `fresaslocas-web`) |
+| Link (cuando se active Pages) | https://ruso13miguel.github.io/Fresalocas-web/ |
 | Instagram | https://www.instagram.com/eldelasfresaslocas/ |
 | WhatsApp | **pendiente**: poner el número en `site/js/config.js` |
 
